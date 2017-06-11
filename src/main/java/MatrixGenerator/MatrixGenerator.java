@@ -14,14 +14,12 @@ public class MatrixGenerator {
         }
 
         Matrix generatedMatrix = new Matrix(matrixHeight, matrixWidth);
-        int[][] genMatrix = new int[matrixHeight][matrixWidth];
         for(int i = 0; i < matrixHeight; i++){
             for (int j = 0; j < matrixWidth; j++){
                 double d = Math.random();
-                genMatrix[i][j] = (int)(d * 20 - 10);
+                generatedMatrix.getMatrix()[i][j] = (int)(d * 20 - 10);
             }
         }
-        generatedMatrix.setMatrix(genMatrix);
 
         return generatedMatrix;
     }
